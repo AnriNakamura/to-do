@@ -1,10 +1,16 @@
 const taskList = [];                // list of tasks
 
 // add task and show info of task
+const taskName = document.createElement('p');
+const taskNum = document.createElement('p');
+const output = document.getElementById('output');
+
 function addTask() {
     taskList.push(newTask.value);   // add task
-    out01.innerText = 'Your input: ' + taskList[taskList.length -1];
-    out02.innerText = 'Task number is ' + taskList.length;
+    taskName.textContent = 'Your input: ' + newTask.value;
+    taskNum.textContent = 'Task number is' + taskList.length;
+    output.appendChild(taskName);
+    output.appendChild(taskNum);
 }
 
 // show all task
@@ -15,8 +21,6 @@ function show() {
 const newTask = document.getElementById('newTask');
 const submit = document.getElementById('submit');
 const showList = document.getElementById('showList');
-const out01 = document.getElementById('out01');
-const out02 = document.getElementById('out02');
 const out03 = document.getElementById('out03');
 
 submit.addEventListener('click', addTask);
