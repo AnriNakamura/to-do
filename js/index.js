@@ -9,7 +9,7 @@ const li = [];
 function addTask() {
     li.push(document.createElement('li'));
     li[li.length-1].textContent = newTask.value;
-    ul.appendChild(li[li.length-1]);
+    ul.insertBefore(li[li.length-1], ul.firstElementChild);
     div.appendChild(ul);
 }
 
