@@ -8,12 +8,11 @@ const input = [];
 const label = [];
 
 // get last value of array
-function lastIndex(array){
-    return array[array.length-1];
-}
+const lastIndex = (array) => array[array.length-1];
 
 // add new task
-function addTask() {
+const submit = document.getElementById('submit');
+submit.addEventListener('click', () => {
     // create element
     div.push(document.createElement('div'));
     input.push(document.createElement('input'));
@@ -25,7 +24,4 @@ function addTask() {
     lastIndex(div).appendChild(lastIndex(input));
     lastIndex(div).appendChild(lastIndex(label));
     taskList.insertBefore(lastIndex(div), taskList.firstElementChild);
-}
-
-const submit = document.getElementById('submit');
-submit.addEventListener('click', addTask);
+});
