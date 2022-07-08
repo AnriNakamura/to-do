@@ -4,6 +4,12 @@ body {
   color: white;
 }
 
+input {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+}
+
 .title {
   white-space: pre;
   font-size: 18px;
