@@ -4,8 +4,9 @@ const taskList = document.getElementById('taskList');
 
 // element lists
 const div = [];
-const input = [];
-const label = [];
+const task = []; // list of things-to-do
+const input = []; // list of input contents
+const output = []; // list of output contents
 
 // get last value of array
 const lastIndex = (array) => array[array.length-1];
@@ -14,6 +15,9 @@ const lastIndex = (array) => array[array.length-1];
 newTask.focus();
 
 // add new task
+/*
+const input = [];
+const label = [];
 newTask.addEventListener('keydown', e => {
     if (e.key === 'Enter') {
         // create element
@@ -27,5 +31,25 @@ newTask.addEventListener('keydown', e => {
         lastIndex(div).appendChild(lastIndex(input));
         lastIndex(div).appendChild(lastIndex(label));
         taskList.insertBefore(lastIndex(div), taskList.firstElementChild);
+    }
+});
+*/
+
+newTask.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+        // create element
+        div.push(document.createElement('div'));
+        task.push(newTask.value);
+        input.push(document.createElement('span'));
+        output.push(document.createElement('span'));
+        // add info of task
+        lastIndex(input).textContent = `ahiruno $ ${lastIndex(task)}`;
+        lastIndex(output).textContent = `add new to-do \\\\ ${lastIndex(task)} //`;
+        // show task
+        lastIndex(div).appendChild(lastIndex(input));
+        lastIndex(div).appendChild(lastIndex(output));
+        taskList.appendChild(lastIndex(div));
+        // clear form
+        newTask.value = '';
     }
 });
