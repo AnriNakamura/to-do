@@ -1,13 +1,33 @@
+/* 
+  font
+  color
+  widght, height
+  margin, padding
+  others
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Space Mono', monospace;
+  font-size: 100%;
+  line-height: 1.5;
   background-color: black;
   color: white;
+  padding: 15px;
 }
 
 input {
+  font: inherit;
   background-color: transparent;
   color: inherit;
+  caret-color: white;
   border: none;
+  outline: none;
 }
 
 .title {
