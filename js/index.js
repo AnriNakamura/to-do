@@ -1,5 +1,5 @@
 // get input and list
-const newTask= document.getElementById('newTask');
+const newTask = document.getElementById('newTask');
 const taskList = document.getElementById('taskList');
 
 // element lists
@@ -9,7 +9,7 @@ const input = []; // list of input contents
 const output = []; // list of output contents
 
 // get last value of array
-const lastIndex = (array) => array[array.length-1];
+const lastIndex = (array) => array[array.length - 1];
 
 // place the cursor in newTask
 newTask.focus();
@@ -39,16 +39,25 @@ newTask.addEventListener('keydown', e => {
     if (e.key === 'Enter') {
         // create element
         div.push(document.createElement('div'));
-        task.push(newTask.value);
         input.push(document.createElement('span'));
         output.push(document.createElement('span'));
-        // add info of task
-        lastIndex(input).textContent = `ahiruno $ ${lastIndex(task)}`;
-        lastIndex(output).textContent = `add new to-do \\\\ ${lastIndex(task)} //`;
-        // show task
+
+        // input content
+        lastIndex(input).textContent = `ahiruno $ ${newTask.value}`;
+
+        // output content
+        if (newTask.value === 'ls') { // ls command
+            for (const t of task) lastIndex(output).textContent += `${t} `;
+        } else { // add new task
+            task.push(newTask.value);
+            lastIndex(output).textContent = `add new to-do \\\\ ${lastIndex(task)} //`;
+        }
+
+        // show contents
         lastIndex(div).appendChild(lastIndex(input));
         lastIndex(div).appendChild(lastIndex(output));
         taskList.appendChild(lastIndex(div));
+
         // clear form
         newTask.value = '';
     }
