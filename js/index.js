@@ -10,6 +10,9 @@ const label = [];
 // get last value of array
 const lastIndex = (array) => array[array.length-1];
 
+// place the cursor in newTask
+newTask.focus();
+
 // add new task
 newTask.addEventListener('keydown', e => {
     if (e.key === 'Enter') {
