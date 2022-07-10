@@ -1,4 +1,16 @@
 // show ascii art
+var title = `
+         _     _                          _ _     _   
+    __ _| |__ (_)_ __ _   _ _ __   ___   | (_)___| |_ 
+   / _\` | '_ \\| | '__| | | | '_ \\ / _ \\  | | / __| __|
+  | (_| | | | | | |  | |_| | | | | (_) | | | \\__ \\ |_ 
+   \\__,_|_| |_|_|_|   \\__,_|_| |_|\\___/  |_|_|___/\\__| `;
+
+const titleDiv = document.getElementById('title');
+const titleArt = document.createElement('span');
+titleArt.textContent = title;
+titleDiv.appendChild(titleArt);
+
 var ahiru = `
         YYYYYYYYYY
      YYYYYYYYYYYYYYY
@@ -33,7 +45,6 @@ for (const a of Array.from(ahiru)) {
     }
     ahiruArt.appendChild(ahiruList[ahiruList.length-1]);
 }
-//document.body.appendChild(ahiruArt);
 
 // get input and list
 const newTask = document.getElementById('newTask');
