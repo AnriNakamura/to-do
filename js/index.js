@@ -1,3 +1,40 @@
+// show ascii art
+var ahiru = `
+        YYYYYYYYYY
+     YYYYYYYYYYYYYYY
+    YYYYBYYYYYYYYYYYYY
+ RRRYYYYYYYYYYYYYYYYYY
+    YYYYYYYYYYYYYYYYY
+     YYYYYYYYYYYYYYYY           
+  YYYYYYYYYYYYYYYYYYYYYYY     YYY
+ YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
+YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
+YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
+ YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
+  YYYYYYYYYYYYYYYYYYYYYYYYYYYY
+   YYYYYYYYYYYYYYYYYYYYYYYY`;
+
+const ahiruArt = document.getElementById('ahiru');
+const ahiruList = [];
+
+for (const a of Array.from(ahiru)) {
+    ahiruList.push(document.createElement('span'));
+    if (a === ' ' || a === '\n') {
+        ahiruList[ahiruList.length-1].textContent = a;
+    } else {
+        ahiruList[ahiruList.length-1].textContent = '#';
+        if (a === 'Y') {
+            ahiruList[ahiruList.length-1].style.color = 'gold';
+        } else if (a === 'R') {
+            ahiruList[ahiruList.length-1].style.color = 'red';
+        } else if (a === 'B') {
+            ahiruList[ahiruList.length-1].style.color = 'black';
+        }
+    }
+    ahiruArt.appendChild(ahiruList[ahiruList.length-1]);
+}
+//document.body.appendChild(ahiruArt);
+
 // get input and list
 const newTask = document.getElementById('newTask');
 const taskList = document.getElementById('taskList');

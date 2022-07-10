@@ -30,10 +30,10 @@ input {
   outline: none;
 }
 
-.title {
+.asciiArt {
   white-space: pre;
-  font-size: 18px;
-  line-height: 1.25;
+  /*font-size: 18px;*/
+  /*line-height: 1.25;*/
 }
 
 #taskList span {
