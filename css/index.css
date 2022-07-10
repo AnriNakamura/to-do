@@ -35,3 +35,7 @@ input {
   font-size: 18px;
   line-height: 1.25;
 }
+
+#taskList span {
+  display: block;
+}
