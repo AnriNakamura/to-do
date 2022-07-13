@@ -1,11 +1,10 @@
-/* 
-  font
-  color
-  widght, height
-  margin, padding
-  others
-*/
+/* =========================================
+    common setting
+    ascii art
+    task
+==========================================*/
 
+/************* common setting *************/
 * {
   margin: 0;
   padding: 0;
@@ -30,12 +29,12 @@ input {
   outline: none;
 }
 
+/**************** ascii art ****************/
 .asciiArt {
   white-space: pre;
-  /*font-size: 18px;*/
-  /*line-height: 1.25;*/
 }
 
+/****************** task ******************/
 #taskList span {
   display: block;
 }
