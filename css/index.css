@@ -12,9 +12,8 @@
 }
 
 body {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Ubuntu Mono', 'Noto Sans JP', sans-serif;
   font-size: 100%;
-  line-height: 1.5;
   background-color: black;
   color: white;
   padding: 15px;
