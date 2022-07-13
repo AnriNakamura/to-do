@@ -28,6 +28,9 @@ newTask.addEventListener('keydown', e => {
         // output content
         if (newTask.value === 'ls') { // ls command
             for (const t of task) lastIndex(output).textContent += `${t} `;
+        } else if (newTask.value === 'help'){
+            lastIndex(output).textContent = 'add: add tasks ls: show tasks';
+            console.log(lastIndex(output).textContent);
         } else { // add new task
             task.push(newTask.value);
             lastIndex(output).textContent = `add new to-do \\\\ ${lastIndex(task)} //`;
