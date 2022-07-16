@@ -32,16 +32,16 @@ const ahiruList = [];
 for (const a of Array.from(ahiru)) {
     ahiruList.push(document.createElement('span'));
     if (a === ' ' || a === '\n') {
-        ahiruList[ahiruList.length-1].textContent = a;
+        lastIndex(ahiruList).textContent = a;
     } else {
-        ahiruList[ahiruList.length-1].textContent = '#';
+        lastIndex(ahiruList).textContent = '#';
         if (a === 'Y') {
-            ahiruList[ahiruList.length-1].style.color = 'gold';
+            lastIndex(ahiruList).style.color = 'gold';
         } else if (a === 'R') {
-            ahiruList[ahiruList.length-1].style.color = 'red';
+            lastIndex(ahiruList).style.color = 'red';
         } else if (a === 'B') {
-            ahiruList[ahiruList.length-1].style.color = 'black';
+            lastIndex(ahiruList).style.color = 'black';
         }
     }
-    ahiruArt.appendChild(ahiruList[ahiruList.length-1]);
+    ahiruArt.appendChild(lastIndex(ahiruList));
 }
